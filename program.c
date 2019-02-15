@@ -53,11 +53,13 @@ int main(int argc, char *argv[]) {
         // head = append(head, i);
     }
     
+    
     printf("Listing all nodes:\n");
     print(head);
 
     printf("Freeing nodes:\n");
     freeList(head);
 
-    return 0;
+    exit(-2);
+    return -1;
 }
