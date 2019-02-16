@@ -26,10 +26,10 @@ struct node *append(struct node *head, int value) {
 }
 
 // prints all nodes starting from the head node
-void print(struct node *head) {
+void print(struct node *head, intFunc fn) {
     if(head != NULL) {
-        printf("%d\n", head->value);
-        print(head->next);
+        fn(head->value);
+        print(head->next, fn);
     }
 }
 

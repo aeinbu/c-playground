@@ -8,6 +8,8 @@ struct node {
     int value;
 };
 
+typedef void (*intFunc)(int);
+
 // returns the new head node
 struct node *prepend(struct node *head, int value);
 
@@ -15,7 +17,7 @@ struct node *prepend(struct node *head, int value);
 struct node *append(struct node *head, int value);
 
 // prints all nodes starting from the head node
-void print(struct node *head);
+void print(struct node *head, intFunc action);
 
 // frees all nodes starting from the head node
 void freeList(struct node *head);

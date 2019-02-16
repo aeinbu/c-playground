@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "node.h"
 
+void printNumber(int number) {
+    printf("Number: %d\n", number);
+}
 
 int main(int argc, char *argv[]) {
     struct node *head = NULL;
@@ -13,7 +16,7 @@ int main(int argc, char *argv[]) {
     }
         
     printf("Listing all nodes:\n");
-    print(head);
+    print(head, &printNumber);
 
 
     printf("Freeing nodes:\n");
