@@ -1,3 +1,3 @@
 program:
-	gcc -g *.c
+	gcc -g src/*.c
 
